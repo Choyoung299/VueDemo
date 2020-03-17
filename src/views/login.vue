@@ -16,6 +16,8 @@ export default {
     });
     // this.Toast("提示文123案");
     this.Toast.success({duration:5000,message:"test"})
+    ////test git 
+    console.log("test-git")
   }
 };
 </script>

@@ -2,16 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-<<<<<<< HEAD
-
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
-=======
 import api from './assets/axios/api' // 导入api接口
 import { Toast } from 'vant'
 import 'vant/lib/index.css'
@@ -31,4 +21,3 @@ new Vue({
     store,
     render: h => h(App)
 }).$mount('#app')
->>>>>>> 7ee6f1c18895a9818b4647ead61efa84a3ca68a5
