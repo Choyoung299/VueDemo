@@ -10,7 +10,8 @@ import 'amfe-flexible'
 Vue.config.productionTip = false
 Vue.prototype.api = api // 将api挂载到vue的原型上
 Vue.prototype.Toast = Toast
-    // 将所有 Toast 的展示时长设置为 800 毫秒
+
+// 将所有 Toast 的展示时长设置为 800 毫秒
 Toast.setDefaultOptions({ duration: 800 });
 
 // 将所有 loading Toast 设置为背景不可点击 (2.2.10 版本开始支持)

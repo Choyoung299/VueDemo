@@ -14,7 +14,6 @@ module.exports = {
         // 是否使用css分离插件
         extract: true,
     },
-
     devServer: {
         host: 'localhost',
         open: true, //配置自动启动浏览器
