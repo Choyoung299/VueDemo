@@ -14,7 +14,6 @@ export default {
     this.api.getGoldPrice().then(res => {
       console.log(res.data);
     });
-    // this.Toast("提示文123案");
     this.Toast.success({duration:5000,message:"test"})
   }
 };
