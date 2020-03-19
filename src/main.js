@@ -6,6 +6,7 @@ import api from './assets/axios/api' // 导入api接口
 import { Toast } from 'vant'
 import 'vant/lib/index.css'
 import 'amfe-flexible'
+import './assets/style/common.css' //引入通用样式
 
 Vue.config.productionTip = false
 Vue.prototype.api = api // 将api挂载到vue的原型上

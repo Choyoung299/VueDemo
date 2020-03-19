@@ -1,9 +1,16 @@
 <template>
-	<div id="test">
+	<div id="login">
 		<headerItem headTitle="登录"></headerItem>
-		<van-field v-model="sms" center clearable label="短信验证码" placeholder="请输入短信验证码">
-			<van-button slot="button" size="small" type="primary" @click="test">发送验证码</van-button>
-		</van-field>
+		<!-- 输入手机号，调起手机号键盘 -->
+		<van-field v-model="tel" type="tel" label="手机号" label-class="label-align-left" />
+		<!-- 输入密码 -->
+		<van-field v-model="password" type="password" label="密码" label-class="label-align-left" />
+        <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>sadasd</div>
+            
+        </div>
 	</div>
 </template>
 
@@ -15,7 +22,8 @@ export default {
 	name: "login",
 	data() {
 		return {
-			sms: ""
+			tel: "",
+			password: ""
 		};
 	},
 	components: {
@@ -24,19 +32,24 @@ export default {
 		[Field.name]: Field
 	},
 	methods: {
-        test(){
-            console.log(123)
-            this.sms=1235
-        }
-    },
+		test() {
+			console.log(123);
+			this.sms = 1235;
+		}
+	},
 	created: function() {
 		this.api.getGoldPrice().then(res => {
 			console.log(res.data);
 		});
 		// this.Toast.success({ duration: 800, message: "test" });
 		////test git
-		console.log("test-git");
 	}
 };
 </script>
-<style scoped></style>
+<style lang="scss" scoped>
+#login {
+	/deep/ .label-align-left {
+		display: flex;
+	}
+}
+</style>
