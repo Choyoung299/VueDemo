@@ -4,6 +4,9 @@
 		<van-field v-model="sms" center clearable label="短信验证码" placeholder="请输入短信验证码">
 			<van-button slot="button" size="small" type="primary" @click="test">发送验证码</van-button>
 		</van-field>
+		<div>
+			123
+		</div>
 	</div>
 </template>
 
