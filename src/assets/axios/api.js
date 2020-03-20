@@ -11,6 +11,11 @@ const api = {
     // post提交    
     login(params) {
         return axios.post(base.LOGIN, params);
+    },
+
+    //获取会员服务协议
+    getVipProtocol() {
+        return axios.get(base.USERPROTOCOL)
     }
 }
 
