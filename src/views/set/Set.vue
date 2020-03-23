@@ -3,19 +3,22 @@
 		<!-- 通用头部 -->
 		<BaseHead headTitle="设置"></BaseHead>
 		<van-cell-group>
-			<van-cell title="单元格" value="内容内容内容内容内容内容内容" />
-			<van-cell title="单元格" value="内容" />
-			<van-cell title="单元格" value="内容" />
-			<van-cell title="单元格" value="内容" />
-			<van-cell title="单元格" value="内容" />
-			<van-cell title="单元格" value="内容" />
+			<van-cell center is-link title="188***8888" value="已认证" />
+			<van-cell center is-link title="密码安全" />
+			<van-cell center is-link title="微信关联" />
+			<van-cell center is-link title="我的银行卡" />
+			<van-cell center is-link title="地址管理" @click="toAddr" />
+			<van-cell center is-link title="关于我们" />
 		</van-cell-group>
+		<div class="plr-10">
+			<van-button class="col-red mt-20" block>退出登录</van-button>
+		</div>
 	</div>
 </template>
 
 <script>
 import BaseHead from "@/components/BaseHead.vue";
-import { Cell, CellGroup } from "vant";
+import { Cell, CellGroup, Button } from "vant";
 export default {
 	name: "set",
 	data() {
@@ -23,16 +26,22 @@ export default {
 	},
 	components: {
 		BaseHead,
+		[Button.name]: Button,
 		[Cell.name]: Cell,
 		[CellGroup.name]: CellGroup
+	},
+	methods: {
+		toAddr() {
+			this.$router.push({ name: "AddressManage" });
+		}
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-#set{
-    /deep/ .van-cell__title{
-        text-align: left;
-    }
+#set {
+	/deep/ .van-cell__title {
+		text-align: left;
+	}
 }
 </style>
