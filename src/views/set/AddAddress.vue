@@ -36,7 +36,7 @@ export default {
 	methods: {
 		onSave() {
             this.Toast("save");
-            this.$router.push({name: 'AddressManage'});
+            this.$router.push({path: '/AddressManage'});
 		},
 		onDelete() {
 			this.Toast("delete");

@@ -57,7 +57,7 @@ export default {
 	methods: {
 		onAdd() {
             this.Toast("新增地址");
-            this.$router.push({name: 'AddAddress'});
+            this.$router.push({path: '/AddAddress'});
 		},
 		onEdit(item, index) {
 			this.Toast("编辑地址:" + index);
