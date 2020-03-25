@@ -9,7 +9,7 @@
 			<van-cell center is-link title="我的银行卡" />
 			<van-cell center is-link title="地址管理" @click="toAddr" />
 			<van-cell center is-link title="关于我们" />
-			<van-cell center is-link :title="this.count" />
+			<!-- <van-cell center is-link :title="this.count" />  测试数据-->
 		</van-cell-group>
 		<div class="plr-10">
 			<van-button class="col-red mt-20" block @click="test">退出登录</van-button>
@@ -35,7 +35,7 @@ export default {
 	},
 	computed: {
 
-		...mapState({
+		...mapState({//测试用
 			count: state => state.count
 		})
 	},

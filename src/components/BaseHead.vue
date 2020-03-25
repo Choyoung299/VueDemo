@@ -1,6 +1,6 @@
 <template>
 	<div id="head" :style="bgColor">
-		<div class="goback" @click="goBack">
+		<div class="goback" @click="goBack" v-if="!hideArrow">
 			<img src="../assets/img/left.png" alt />
 		</div>
 		<div class="head-title">{{ headTitle }}</div>
@@ -14,7 +14,8 @@ export default {
 	props: {
 		headTitle: String,
 		headBtnText: String,
-		bgColor: String
+		bgColor: String,
+		hideArrow: Boolean
 	},
 	methods: {
 		//返回上一页

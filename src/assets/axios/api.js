@@ -1,6 +1,6 @@
 import base from './baseUrl'; // 导入接口域名列表
 import axios from './http'; // 导入http中创建的axios实例
-import qs from 'qs'; // 根据需求是否导入qs模块
+
 
 const api = {
     // 获取金价
@@ -15,7 +15,12 @@ const api = {
 
     //获取会员服务协议
     getVipProtocol() {
-        return axios.get(base.USERPROTOCOL)
+        return axios.get(base.USERPROTOCOL);
+    },
+
+    //获取用户个人信息
+    getUserInfo(params) {
+        return axios.post(base.GETUSERINFO, params);
     }
 }
 
