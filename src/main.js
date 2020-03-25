@@ -9,7 +9,7 @@ import 'amfe-flexible'
 import './assets/style/common.css' //引入通用样式
 
 Vue.config.productionTip = false
-Vue.prototype.api = api // 将api挂载到vue的原型上
+Vue.prototype.$api = api // 将api挂载到vue的原型上
 Vue.prototype.Toast = Toast
 
 // 将所有 Toast 的展示时长设置为 800 毫秒

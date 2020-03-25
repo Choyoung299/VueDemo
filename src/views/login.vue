@@ -62,7 +62,7 @@ export default {
 		}
 	},
 	created: function() {
-		this.api.getGoldPrice().then(res => {
+		this.$api.getGoldPrice().then(res => {
 			console.log(res.data);
 		});
 	}
