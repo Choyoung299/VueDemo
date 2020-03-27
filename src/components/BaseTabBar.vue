@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { Tabbar, TabbarItem, icon } from "vant";
+import { Tabbar, TabbarItem } from "vant";
 export default {
 	name: "tabBar",
 	data() {

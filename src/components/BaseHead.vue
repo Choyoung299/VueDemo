@@ -4,7 +4,7 @@
 			<img src="../assets/img/left.png" alt />
 		</div>
 		<div class="head-title">{{ headTitle }}</div>
-		<div @click="onHeadRightBtn()">{{ headBtnText }}</div>
+		<div class="head-btn" @click="onHeadRightBtn()">{{ headBtnText }}</div>
 	</div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
 	z-index: 999999;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	// justify-content: space-between;
 	font-size: 16px;
 	padding-right: 10px;
 	box-sizing: border-box;
@@ -50,8 +50,13 @@ export default {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+        transform: translate(-50%, -50%);
+    }
+    .head-btn{
+        color: #ffbb18;
+        position: absolute;
+        right: 10px;
+    }
 	.goback {
 		width: 40px;
 		height: 40px;
