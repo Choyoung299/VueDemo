@@ -398,6 +398,10 @@ img {
     padding-right: 20px !important
 }
 
+.plr-5 {
+    padding: 0 5px;
+}
+
 .plr-10 {
     padding: 0 10px;
 }
@@ -528,7 +532,14 @@ img {
     background-color: #000;
 }
 
-.icon_logo {
+.icon_logo16 {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.icon_logo30 {
     width: 30px;
     height: 30px;
     vertical-align: middle;
