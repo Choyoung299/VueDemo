@@ -37,7 +37,7 @@
 		</div>
         <!-- 回收按钮 -->
         <div class="w1h50 flex-ac flex-row recycle-btn">
-            <div>快递回收</div>
+            <div>快递回收</div> 
             <div>门店回收</div>
         </div>
 	</div>
