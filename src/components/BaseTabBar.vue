@@ -1,6 +1,6 @@
 <template>
 	<div id="tabbar">
-		<van-tabbar v-model="active" active-color="#ffbb18">
+		<van-tabbar v-model="active" active-color="#ffbb18" @change="onChange">
 			<van-tabbar-item v-for="(item,index) in tabBar" :key="index" :to="(item.path)">
 				<span>{{item.name}}</span>
 				<template #icon="props">
@@ -55,6 +55,12 @@ export default {
 	components: {
 		[Tabbar.name]: Tabbar,
 		[TabbarItem.name]: TabbarItem
+	},
+	methods: {
+		onChange(index) {
+		}
+	},
+	created() {
 	}
 };
 </script>

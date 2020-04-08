@@ -34,7 +34,6 @@ export default {
 		[CellGroup.name]: CellGroup
 	},
 	computed: {
-
 		...mapState({//测试用
 			count: state => state.count
 		})

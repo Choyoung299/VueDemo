@@ -21,8 +21,8 @@ export default {
 		BaseHead
 	},
 	created: function() {
-		this.api.getVipProtocol().then(res => {
-			this.vipProtocol = res.data.data;
+		this.$api.getVipProtocol().then(res => {
+			this.vipProtocol = res.data;
 		});
 	}
 };

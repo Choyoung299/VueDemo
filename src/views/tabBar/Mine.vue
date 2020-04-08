@@ -59,7 +59,8 @@ import qs from "qs";
 export default {
 	name: "mine",
 	data() {
-		return {};
+		return {
+		};
 	},
 	components: {
 		[Button.name]: Button,
@@ -93,8 +94,8 @@ export default {
 	width: 100%;
 	height: 100%;
 	background: #fafafa;
-    font-size: 14px;
-    padding-bottom: 50px;
+	font-size: 14px;
+	padding-bottom: 50px;
 }
 .mine-info {
 	width: 100%;
