@@ -10,7 +10,7 @@
 			label-class="label-align-left"
 			class="mt-20"
 			placeholder="请输入手机号"
-            maxlength="11"
+			maxlength="11"
 		/>
 		<!-- 输入密码 -->
 		<van-field
@@ -19,11 +19,11 @@
 			label="密码"
 			label-class="label-align-left"
 			placeholder="请输入密码"
-            maxlength="20"
+			maxlength="20"
 		/>
 		<!-- 登录按钮 -->
 		<div class="plr-10 mt-20">
-			<van-button :disabled="!tel||!password" type="warning" block>登录</van-button>
+			<van-button :disabled="!tel||!password" type="warning" block @click="onLogin">登录</van-button>
 		</div>
 		<!-- 注册入口 -->
 		<div class="txt-c font-12 mt-20">
@@ -41,7 +41,9 @@
 <script>
 import BaseHead from "@/components/BaseHead.vue";
 import { Button, Field } from "vant";
-
+import md5 from "@/assets/utils/md5.js";
+import util from "@/assets/utils/util.js";
+import Storage from "@/assets/utils/localStorage.js";
 export default {
 	name: "login",
 	data() {
@@ -56,9 +58,27 @@ export default {
 		[Field.name]: Field
 	},
 	methods: {
-		test() {
-			console.log(123);
-			this.sms = 1235;
+		onLogin() {
+			if (!util.checkParam(this.tel, "phone")) {
+				this.Toast("请输入正确的账号");
+				return;
+			}
+			if (!util.checkParam(this.password, "password")) {
+				this.Toast("密码不正确");
+				return;
+			}
+			this.$api
+				.login({
+					LoginName: this.tel,
+					password: md5.hexMD5(this.password)
+				})
+				.then(res => {
+					console.log(res);
+
+					Storage.set("token", res.data.userInfo.token);
+					Storage.set("userInfo", res.data.userInfo);
+					this.$router.go(-1);
+				});
 		}
 	},
 	created: function() {

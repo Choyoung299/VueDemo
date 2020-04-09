@@ -5,7 +5,7 @@
 		<div class="mine-info">
 			<div class="mine-head flex flex-around">
 				<div class="portrait"></div>
-				<div class="tel">登录/注册</div>
+				<div class="tel" @click="toLogin">登录/注册</div>
 				<div class="set" @click="toSet">
 					<img src="../../assets/img/mine_set.png" />
 				</div>
@@ -55,12 +55,10 @@
 <script>
 import { Cell, CellGroup, Button, Tabbar, TabbarItem } from "vant";
 import md5 from "@/assets/utils/md5.js";
-import qs from "qs";
 export default {
 	name: "mine",
 	data() {
-		return {
-		};
+		return {};
 	},
 	components: {
 		[Button.name]: Button,
@@ -71,6 +69,9 @@ export default {
 		toSet() {
 			//前往设置页面
 			this.$router.push({ path: "/Set" });
+		},
+		toLogin() {
+			this.$router.push({ path: "/Login" });
 		}
 	},
 	created() {
