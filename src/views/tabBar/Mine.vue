@@ -71,7 +71,18 @@ export default {
 			this.$router.push({ path: "/Set" });
 		},
 		toLogin() {
-			this.$router.push({ path: "/Login" });
+			this.Dialog.confirm({
+                // title: "",
+                width:280,
+				message: "未登录，前往登录"
+			})
+				.then(() => {
+					// on confirm
+				})
+				.catch(() => {
+					// on cancel
+				});
+			// this.$router.push({ path: "/Login" });
 		}
 	},
 	created() {

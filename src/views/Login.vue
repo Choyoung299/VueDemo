@@ -73,18 +73,17 @@ export default {
 					password: md5.hexMD5(this.password)
 				})
 				.then(res => {
-					console.log(res);
-
-					Storage.set("token", res.data.userInfo.token);
-					Storage.set("userInfo", res.data.userInfo);
-					this.$router.go(-1);
+					if (res.code == "000000") {
+						Storage.set("token", res.data.userInfo.token);
+						Storage.set("userInfo", res.data.userInfo);
+						this.$router.go(-1);
+					}else{
+                        this.Toast(res.description)
+                    }
 				});
 		}
 	},
 	created: function() {
-		this.$api.getGoldPrice().then(res => {
-			console.log(res.data);
-		});
 	}
 };
 </script>

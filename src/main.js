@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import api from './assets/axios/api' // 导入api接口
-import { Toast } from 'vant'
+import { Toast, Dialog } from 'vant'
 import 'vant/lib/index.css'
 import 'amfe-flexible'
 import './assets/style/common.css' //引入通用样式
@@ -11,6 +11,7 @@ import './assets/style/common.css' //引入通用样式
 Vue.config.productionTip = false
 Vue.prototype.$api = api // 将api挂载到vue的原型上
 Vue.prototype.Toast = Toast
+Vue.prototype.Dialog = Dialog
 
 
 // 将所有 Toast 的展示时长设置为 800 毫秒
